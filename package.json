@@ -1,0 +1,28 @@
+{
+  "name": "smoothup",
+  "description": "A modal that works",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usefulteam/smoothup.git"
+  },
+  "keywords": [
+    "modal",
+    "popup"
+  ],
+  "author": "Useful Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/usefulteam/smoothup/issues"
+  },
+  "homepage": "https://github.com/usefulteam/smoothup#readme",
+  "devDependencies": {
+    "snowpack": "^3.1.2"
+  }
+}
