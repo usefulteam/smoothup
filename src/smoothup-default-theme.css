@@ -1,0 +1,242 @@
+/* ==========================================================================
+   Smoothup's default mobile first theme
+   ========================================================================== */
+
+/* Default theme styles for the background */
+
+.smoothup-bg.smoothup-is-opening,
+.smoothup-bg.smoothup-is-opened {
+  filter: blur(3px);
+}
+
+/* Default theme styles of the overlay */
+
+.smoothup-overlay {
+  background: rgba(43, 46, 56, 0.9);
+}
+
+.smoothup-overlay.smoothup-is-opening,
+.smoothup-overlay.smoothup-is-closing {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.smoothup-overlay.smoothup-is-opening {
+  animation-name: smoothup-overlay-opening-keyframes;
+}
+
+.smoothup-overlay.smoothup-is-closing {
+  animation-name: smoothup-overlay-closing-keyframes;
+}
+
+/* Default theme styles of the wrapper */
+
+.smoothup-wrapper {
+  padding: 10px 10px 0;
+}
+
+/* Default theme styles of the modal dialog */
+
+.smoothup {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 35px;
+
+  transform: translate3d(0, 0, 0);
+
+  color: #2b2e38;
+  background: #fff;
+}
+
+.smoothup.smoothup-is-opening,
+.smoothup.smoothup-is-closing {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.smoothup.smoothup-is-opening {
+  animation-name: smoothup-opening-keyframes;
+}
+
+.smoothup.smoothup-is-closing {
+  animation-name: smoothup-closing-keyframes;
+}
+
+/* Vertical align of the modal dialog */
+
+.smoothup,
+.smoothup-wrapper:after {
+  vertical-align: middle;
+}
+
+/* Close button */
+
+.smoothup-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  overflow: visible;
+
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+
+  color: #95979c;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.smoothup-close:hover,
+.smoothup-close:focus {
+  color: #2b2e38;
+}
+
+.smoothup-close:before {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+  font-size: 25px;
+  line-height: 35px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 35px;
+
+  content: "\00d7";
+  text-align: center;
+}
+
+/* Dialog buttons */
+
+.smoothup-confirm,
+.smoothup-cancel {
+  font: inherit;
+
+  display: inline-block;
+  overflow: visible;
+
+  min-width: 110px;
+  margin: 0;
+  padding: 12px 0;
+
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  border: 0;
+  outline: 0;
+}
+
+.smoothup-confirm {
+  color: #fff;
+  background: #81c784;
+}
+
+.smoothup-confirm:hover,
+.smoothup-confirm:focus {
+  background: #66bb6a;
+}
+
+.smoothup-cancel {
+  color: #fff;
+  background: #e57373;
+}
+
+.smoothup-cancel:hover,
+.smoothup-cancel:focus {
+  background: #ef5350;
+}
+
+/* Remove inner padding and border in Firefox 4+ for the button tag. */
+
+.smoothup-confirm::-moz-focus-inner,
+.smoothup-cancel::-moz-focus-inner,
+.smoothup-close::-moz-focus-inner {
+  padding: 0;
+
+  border: 0;
+}
+
+/* Keyframes
+   ========================================================================== */
+
+@keyframes smoothup-opening-keyframes {
+  from {
+    transform: scale(1.05);
+
+    opacity: 0;
+  }
+  to {
+    transform: none;
+
+    opacity: 1;
+
+    filter: blur(0);
+  }
+}
+
+@keyframes smoothup-closing-keyframes {
+  from {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+
+    opacity: 0;
+
+    filter: blur(0);
+  }
+}
+
+@keyframes smoothup-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes smoothup-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Media queries
+   ========================================================================== */
+
+@media only screen and (min-width: 641px) {
+  .smoothup {
+    max-width: 700px;
+  }
+}
+
+/* IE8
+   ========================================================================== */
+
+.lt-ie9 .smoothup-overlay {
+  background: #2b2e38;
+}
+
+.lt-ie9 .smoothup {
+  width: 700px;
+}

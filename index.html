@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smoothup - A modal that works</title>
+
+  <link rel="stylesheet" href="dist/smoothup.css">
+  <link rel="stylesheet" href="dist/smoothup-default-theme.css">
+</head>
+<body>
+  <div class="smoothup" data-smoothup-id="modal">
+    <button data-smoothup-action="close" class="smoothup-close"></button>
+    <h1>Smoothup</h1>
+    <p>
+      Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with
+      declarative configuration and hash tracking.
+    </p>
+    <br>
+    <button data-smoothup-action="cancel" class="smoothup-cancel">Cancel</button>
+    <button data-smoothup-action="confirm" class="smoothup-confirm">OK</button>
+  </div>
+
+  <a href="#modal">Call the modal with data-smoothup-id="modal"</a>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="dist/smoothup.js"></script>
+</html>
